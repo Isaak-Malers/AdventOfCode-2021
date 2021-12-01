@@ -10,6 +10,12 @@ s3 = [0, 1]
 s99 = [199, 200, 208, 210, 200, 207, 240, 269, 260, 263]
 
 
+def day1Adder(d):
+    count = 0
+    for seq in d:
+        count = count + len(seq)-1
+    return count
+
 def day1(data):
     # first lines can be removed if we never accept arrays smaller than 2.
     if len(data) <= 1:
@@ -46,7 +52,9 @@ print(o3)
 o99 = day1(s99)
 print(s99)
 print(o99)
+print(day1Adder(o99))
 
 o100 = day1(s100)
 print(s100)
 print(o100)
+print(day1Adder(o100))
